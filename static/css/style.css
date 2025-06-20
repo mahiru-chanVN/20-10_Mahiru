@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            background-image: url('https://i.postimg.cc/qhpRCjY4/image.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            backdrop-filter: blur(5px);
+            height: 120vh;
+            position: relative;
+        }
+     .name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            animation: slideInRight 1s ease-out;
+            position: absolute;
+            top: 19%;
+            left: 30%;
+        }
+         .logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+       .character-container {
+            position: absolute;
+            top: 23%;
+            left: 18%;
+            width: 160px;
+            height:160px;
+            background: linear-gradient(135deg, rgba(255, 182, 193, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: float-character 6s ease-in-out infinite;
+        }
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            z-index: 10;
+            
+        }
+        .avatar {
+            width: 100%;
+            height: 100%;
+            background-image: url('https://cdn.discordapp.com/attachments/1054634758056972359/1383817106214359071/506127262_692899676692910_2389013090879008296_n.jpg?ex=68502b9c&is=684eda1c&hm=5639ff1601c7bb7ac337517e0d0589d733570362f2b8cb0a39a50c6c1c8e3009&');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .normal-text {
+           font-family: "Sevillana", cursive;
+           font-weight: 400;
+           font-style: normal;
+            color: #000000;
+            font-size: 2.5rem;
+            position: absolute;
+            top:26%;
+            left: 30%;
+            animation: slideInRight 1s ease-out 0.3s both;
+        }
+        .nm-text {
+           font-family: "Sevillana",cursive;
+           font-weight: 400;
+           font-style: normal;
+            color: #3EC9CE;
+            font-size:2rem;
+            position:absolute;
+            top:40%;
+            left: 30%;
+            animation: slideInRight 1s ease-out 0.3s both;
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+     .facebook-btn {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-image: "./images/facebook.png";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+         .icons-container {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            position: absolute;
+            top: 75%;
+            left: 85%;
+            z-index: 200;
+        }
+
+        .icon-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: none;
+            cursor: pointer;
+        }
+
+        .icon-btn:hover {
+            transform: translateY(-2px);
+            background: #5a5a5a;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .icon-btn:active {
+            transform: translateY(0);
+        }
+
+        .icon-button {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+       /*Discord icon */
+        .discord-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        /* GitHub icon */
+        .github-icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Email icon  */
+        .email-icon {
+            width: 26px;
+            height: 26px;
+        }
+        .code-language-card {
+            position: absolute;
+            top: 35%;
+            left: 10%;
+            background: #2c2f4a;
+            border-radius: 20px;
+            padding: 25px 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            max-width: 300px;
+            margin: 40px auto;
+            text-align: left;
+            animation: slideInRight 1s ease-out 0.3s both;
+}
+.code-language-card h2 {
+  text-align: center;
+  color: #00ffe0;
+  margin-bottom: 20px;
+}
+.code-language-card .lang {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  margin: 12px 0;
+}
+.code-language-card .lang i {
+  font-size: 1.8em;
+  margin-right: 12px;
+}
+.clock-widget {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  background: #1f1f30;
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  color: #00ffcc;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  animation: slideInRight 1s ease-out 0.3s both;
+}
+
+.clock-widget .clock-time {
+  font-size: 2em;
+  margin-bottom: 8px;
+}
+
+.clock-widget .clock-date {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.clock-widget .clock-tz {
+  font-size: 0.9em;
+  color: #aaa;
+}
+   .mota {
+         position: relative;
+         background-color: #000000;
+         border: 5px solid #FFFFFF;
+         border-radius: 20px;
+         padding: 20px;
+}
+@media (max-width: 768px) {
+    .mini-slider-container {
+        width: 200px;
+        height: 120px;
+    }
+    
+    .mini-slide-title {
+        font-size: 10px;
+    }
+    
+    .mini-nav-button {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+    }
+}
+
+/* Tương thích với dark mode */
+@media (prefers-color-scheme: dark) {
+    .mini-slider-container {
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Đảm bảo không conflict với CSS hiện có */
+.mini-slider-widget * {
+    box-sizing: border-box;
+    z-index: 1000;
+    margin: 0px;
+}
+
+.mini-slider-widget img {
+    max-width: none;
+    height: auto;
+}
+
+/* Animation cho slide chuyển động smooth hơn */
+.mini-slide {
+    will-change: opacity;
+}
+.mini-slide {
+    will-change: opacity;
+}
+.mini-slider-widget {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    z-index: 1000;
+    /* Có thể điều chỉnh vị trí theo ý muốn */
+}
+
+.mini-slider-container {
+    position: relative;
+    width: 500px;
+    height: 130px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    overflow: hidden;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mini-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mini-slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    z-index: 1;
+}
+.mini-slide.mini-active {
+    display: flex;
+    opacity: 1;
+    z-index: 2;
+}
+.mini-slide img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.mini-slide-title {
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    padding: 4px 12px;
+    border-radius: 8px;
+    margin-top: 8px;
+    font-size: 1rem;
+    text-align: center;
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mini-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mini-nav-button.mini-prev {
+    left: 8px;
+}
+.mini-nav-button.mini-next {
+    right: 8px;
+}
+.mini-nav-button:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+.mini-dots-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 20;
+}
+.mini-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s, background 0.2s;
+}
+.mini-dot.mini-active {
+    background: #00bcd4;
+    opacity: 1;
+}
+
+.mini-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    border: 4px solid #fff;
+    border-top: 4px solid #00bcd4;
+    border-radius: 50%;
+    animation: mini-spin 1s linear infinite;
+    z-index: 100;
+    display: none;
+}
+@keyframes mini-spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg);}
+    100% { transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+.mini-slide-counter {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    z-index: 30;
+    pointer-events: none;
+}
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeout{
+    from{opacity: 1;}
+    to {opacity: 0;}
+}
+@import url('https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&family=Edu+SA+Hand:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap');
+        .nm-text1 {
+            
+           font-family: "Anaheim",cursive;
+           font-weight: 600;
+           font-style: normal;
+            color: #0B0BFD;
+            font-size:2rem;
+            position:absolute;
+            top:15%;
+            right: 20%;
+            animation: slideInRight 1s ease-out 0.3s both;
+        }
