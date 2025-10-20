@@ -348,3 +348,14 @@
             display: inline-block;
             margin: 0 3px;
         }
+
+        .Note {
+            background-color: #00f2fe;
+            display: block;
+            color:#000000;
+            border-radius: 15px;
+            width: fit-content;
+            position: absolute;
+            bottom: 10%;
+            right: 35%;
+        }
