@@ -7,7 +7,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-image: url('https://i.postimg.cc/HWzpSqh0/547143416-1766048890789665-149911337091641835-n.jpg');
+            background-image: url('./ALT.jpg');
             background-size: cover;
             min-height: 100vh;
             display: flex;
