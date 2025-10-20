@@ -86,21 +86,39 @@
             setTimeout(() => heart.remove(), 4000);
         }
 
+        // Han che click lien tuc
+        const _celebrateState = {
+            originalHTML: null,
+            restoreTimer: null
+        };
+
         function celebrate(name) {
             const messageBox = document.querySelector('.message');
-            const originalText = messageBox.innerHTML;
-            
+
+            //Fix bug: tranh flicker
+            if (_celebrateState.originalHTML === null) {
+                _celebrateState.originalHTML = messageBox.innerHTML;
+            }
+
+           //timeout button
+            if (_celebrateState.restoreTimer) {
+                clearTimeout(_celebrateState.restoreTimer);
+                _celebrateState.restoreTimer = null;
+            }
+
             let personalMessage = '';
             if (name === 'Phạm Thị Thanh') {
                 personalMessage = ' Chúc mừng ngày Phụ nữ Việt Nam 20/10! <br>Chúc mẹ luôn xinh đẹp, công tác tốt và dồi dào sức khoẻ hẹ hẹ hẹ 💖';
             } else if (name === 'Nguyễn Anh Thư') {
                 personalMessage = ' Chúc mừng ngày 20/10! <br>Chúc sinh viên Học Viện Tài Chính luôn tràn đầy niềm vui, sức khỏe dồi dào, lâu lâu về mình kéo nhau đi ăn nữa nhé 💙';
             }
-            
+
             messageBox.innerHTML = personalMessage;
-            
-            setTimeout(() => {
-                messageBox.innerHTML = originalText;
+
+            //luu lai click gan nhat
+            _celebrateState.restoreTimer = setTimeout(() => {
+                messageBox.innerHTML = _celebrateState.originalHTML;
+                _celebrateState.restoreTimer = null;
             }, 6000);
             
             // tao phao hoa
